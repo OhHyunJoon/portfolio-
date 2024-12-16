@@ -1,0 +1,26 @@
+@media screen and (max-width:1292px){
+    .about * {font-size: 1rem;}
+    .about .img {width: 250px;height: 350px;}
+    .about .img img {width: 100%; height: 100%;}
+}
+@media screen and (max-width:1112px){
+    .aboutme{    flex-direction: column;}  
+    .proflie         {height: 170vh;} 
+}
+@media screen and (max-width:708px){
+    .aboutme{    flex-direction: column;}  
+    .proflie         {height: 210vh;} 
+    .aboutme .aboutleft {
+        width: 100%;
+    }
+    .profile-text h2 {font-size: 1.5rem;}
+    .profile-text span {
+        font-size: 2.5rem;
+        line-height: 94px;
+    }
+}
+@media screen and (max-width:502px){
+    .about .img {
+        width: 170px;
+    } 
+}

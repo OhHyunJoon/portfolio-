@@ -1,0 +1,485 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GmarketB';
+    src: url('../font/GmarketSansBold.otf');
+}
+
+@font-face {
+    font-family: 'GmarketL';
+    src: url('../font/GmarketSansLight.otf');
+}
+
+@font-face {
+    font-family: 'PretendardB';
+    src: url('../font/Pretendard-Bold.woff');
+}
+
+@font-face {
+    font-family: 'PretendardR';
+    src: url('../font/Pretendard-Regular.woff');
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'PretendardR';
+}
+
+.inner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 30px;
+    mix-blend-mode: difference;
+}
+
+header nav {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: right;
+}
+
+header nav li::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: #707070;
+    margin-left: 8px;
+}
+
+header nav li a {
+    line-height: 30px;
+    color: #ddd;
+}
+
+header nav li.on a {
+    color: rgb(192, 0, 0);
+}
+
+.header h1 a {
+    font-family: 'GmarketB';
+    font-size: 24px;
+    color: #fff;
+}
+
+.profile-box {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.profile-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    font-family: 'GmarketB';
+}
+.profile-text h2{
+    color: #fff;
+}
+.profile-text span {
+    font-size: 4.5rem;
+    line-height: 120px;
+}
+.header .cover_btn {
+    position: fixed;
+    top: -40px;
+    right: 30px;
+    transform: translate(-50%);
+    z-index: 99;
+    cursor: pointer;
+}
+
+
+.wheel {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.5rem;
+    height: 2.5rem;
+    border: 2px solid var(--lc);
+    font-size: 0;
+    border-radius: 0.7rem;
+    opacity: 0.5;
+    z-index: 9999;
+    background-color: #fff;
+  }
+
+  .wheel span {
+    position: absolute;
+    bottom: 0.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.2rem;
+    height: 0.5rem;
+    background: var(--lc);
+    border-radius: 0.1rem;
+    animation: wheel .5s infinite;
+    background-color: #b5b4b4;
+  }
+  
+  @keyframes wheel {
+    to {
+      top: .6rem;
+    }
+  }
+
+/*  PROFILE  */
+.proflie {
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-wrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.proflie h2 {
+    text-align: center;
+    padding-top: 0;
+    margin-bottom: 50px;
+    font-size: 48px;
+    color: #fff;
+    font-family: 'GmarketB';
+}
+
+.about {
+    background-color: rgb(20 20 20 / 90%);
+    border-radius: 20px;
+    padding: 3rem;
+    color: #fff;
+    z-index: 99;
+    font-family: 'mainbold';
+    border: solid 1px #fff;
+}
+
+.aboutme {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.about .img {
+    margin-bottom: 2rem;
+}
+
+.about .img img {
+    width: 300px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.about * {
+    font-size: 1.2rem;
+    line-height: 2;
+    font-family: 'pretendardR';
+}
+
+.about span {
+    font-family: 'GmarketL';
+}
+
+.aboutme .aboutleft {
+    width: 40%;
+}
+
+.aboutme .aboutright {
+    width: 100%;
+}
+
+.aboutme .aboutright h3 {
+    margin: 30px 0;
+    position: relative;
+}
+
+.aboutme .aboutright h3:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -13px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #df2d2d;
+}
+
+.aboutme .aboutright h3:nth-child(1) {
+    margin-top: 0;
+}
+
+.aboutme .aboutright p {
+    padding-left: 5px;
+}
+
+.aboutme .aboutright em {
+    font-style: normal;
+    padding-right: 20px;
+}
+
+.portfol {
+    width: 95%;
+    height: 400px;
+    margin-top: 100px;
+    overflow: visible;
+}
+.portfol .swiper-wrapper {
+    
+}
+.portfol .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+}
+
+.portfol .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -14%;
+}
+
+.portfol  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background-color: #7d7d7d;
+}
+.portfol .swiper-slide {
+    border: solid 1px #dfdfdf
+}
+.portfol .swiper-slide img {
+    width: 100%; height: 100%;
+}
+
+.portfol .swiper-slide .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    padding: 1rem;
+    opacity: 0;
+    transition: all .5s;
+
+}
+
+.portfol .swiper-slide .text:hover {
+    opacity: 1;
+}
+
+.portfol .swiper-slide .text a {
+    font-family: 'PretendardB';
+    display: block;
+    width: 220px;
+    text-align: center;
+    background-color: #000000;
+    margin: 1rem;
+    border-radius: 15px;
+    padding: 4px 10px;
+    color: #fff;
+}
+
+.portfol .swiper-slide .text span:nth-child(1) {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: all .5s;
+}
+
+.portfol .swiper-slide .text:hover span:nth-child(1) {
+    width: 70px;
+}
+
+.portfol .swiper-slide .text span:nth-child(2) {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 2px;
+    height: 0px;
+    background-color: #fff;
+    transition: all .5s;
+}
+
+.portfol .swiper-slide .text:hover span:nth-child(2) {
+    height: 70px;
+}
+
+.portfolio {
+    background: url('../image/portfolio-bg.jpg');
+    height: 100vh;
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 48px;
+    font-family: 'GmarketB';
+    color: #333;
+}
+
+.pofol>p {
+    text-align: center;
+    font-family: 'pretendardR';
+}
+
+
+.contact {
+    height: 100vh;
+    background-color: #f5f5f5;
+    position: relative;
+}
+.design-wrap {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+.design-wrap a {
+    display: inline-block;
+    width: 40%;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.design-wrap a img {
+    width: 100%;
+    height: 100%;
+}
+.design-wrap a img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+.DETAIL img {
+    object-fit: cover;
+}
+.DETAIL a{
+    width: 255px;
+    height: 327px;
+    overflow: hidden;
+    margin: 50px;
+}
+.contact-wrap {
+}
+
+.contact h3 {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 36px;
+    font-family: 'PretendardR';
+}
+
+.contact p {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'GmarketL';
+}
+
+.contact .arrow {
+    position: relative;
+    animation-name: arrow;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.arrow::after {
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    content: '';
+    width: 50px;
+    /* 사이즈 */
+    height: 50px;
+    /* 사이즈 */
+    border-top: 5px solid #000;
+    /* 선 두께 */
+    border-right: 5px solid #000;
+    /* 선 두께 */
+    transform: translateX(-50%) rotate(135deg);
+    /* 각도 */
+}
+
+.contact .email {
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+}
+.contact .email img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 115%;
+}
+
+.contact-bt {
+    position: absolute;
+    bottom: 0px;
+    background-color: #222;
+    height: 10vh;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 10vh;
+}
+
+@-webkit-keyframes arrow {
+    0% {
+        top: 0px;
+    }
+
+    100% {
+        top: 50px;
+    }
+
+}
